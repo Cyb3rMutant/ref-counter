@@ -17,4 +17,5 @@ class my_string {
 
   private:
     char *data;
+    int *ref_counter = 0;
 };
