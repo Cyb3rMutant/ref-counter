@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ostream>
+
 template <class T> class Rc {
   public:
     Rc() = delete;

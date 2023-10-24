@@ -1,5 +1,4 @@
 #include "my_string.hpp"
-#include "rc.hpp"
 #include <iostream>
 
 int main(int argc, char *argv[]) {

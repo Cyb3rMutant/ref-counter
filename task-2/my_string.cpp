@@ -1,8 +1,6 @@
 #include "my_string.hpp"
-#include <cstdlib>
 #include <cstring>
 #include <iostream>
-#include <stdexcept>
 
 my_string::my_string() { new_empty(); }
 
