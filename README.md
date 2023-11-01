@@ -1,10 +1,33 @@
 # Table of contents
-- [Task 1](#task-1)
-- [Task 2](#task-2)
-- [Task 3](#task-3)
-- [Task 4](#task-4)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+- [How to run](#how-to-run)
+- [Task 1](#task-1)
+   * [Introduction](#introduction)
+   * [Class Overview](#class-overview)
+      + [Constructors](#constructors)
+      + [Assignment](#assignment)
+      + [Member Functions](#member-functions)
+   * [Memory Management](#memory-management)
+   * [Memory Management Illustration](#memory-management-illustration)
+   * [Error Hndling](#error-hndling)
+- [Task 2](#task-2)
+   * [Introduction](#introduction-1)
+   * [Class Overview](#class-overview-1)
+      + [Constructors and Destructors](#constructors-and-destructors)
+      + [Assignment](#assignment-1)
+      + [Member Functions](#member-functions-1)
+   * [Memory Management](#memory-management-1)
+   * [Memory Management Illustration](#memory-management-illustration-1)
+   * [Error Hndling](#error-hndling-1)
+- [Task 3](#task-3)
+   * [Introduction](#introduction-2)
+   * [Memory Leak](#memory-leak)
+- [Task 4](#task-4)
+   * [Introduction](#introduction-3)
+   * [Class Overview](#class-overview-2)
+      + [Constructors, Assignment and Destructors](#constructors-assignment-and-destructors)
+      + [Overloaded Operators](#overloaded-operators)
+   * [Memory Management](#memory-management-2)
 
 # How to run
 
@@ -12,7 +35,7 @@ use the following command to run any of the tasks:
 
 ```bash
 $ cd task-<task number>
-$ clang++ -g -o main my_string.cpp main.cpp
+$ clang++ -o main my_string.cpp main.cpp
 $ ./main
 ```
 
@@ -284,4 +307,4 @@ All the constructors, assignment operator and destructor act the same way they d
 
 ## Memory Management
 
-Everything about the class relating to reference counting is exactly the same as task 2, so for this section you can refere back to task 2's memory management section.
+Everything about the class relating to reference counting is exactly the same as task 2, so for this section you can refere back to [task 2's memory management section](#memory-management-1).
