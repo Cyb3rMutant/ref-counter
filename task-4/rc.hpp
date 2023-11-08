@@ -54,6 +54,9 @@ template <class T> class Rc {
     // Overloaded arrow operator (->)
     T *operator->() { return obj; }
 
+    // Overloaded derference operator (*)
+    T &operator*() { return *obj; }
+
     // Friend function to overload the << operator for printing
     friend std::ostream &operator<<(std::ostream &out, Rc &s) {
         out << *(s.obj); // Output the object pointed to by Rc

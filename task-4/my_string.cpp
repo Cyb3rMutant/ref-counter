@@ -50,7 +50,11 @@ void my_string::set_char(const int &i, const char &c) {
 void my_string::print() const { std::cout << data << std::endl; }
 
 // Helper function to allocate memory for an empty string.
-void my_string::new_empty() { data = new char[1]; }
+void my_string::new_empty() {
+    len = 0;
+    data = new char[len];
+    strcpy(data, "");
+}
 
 // Helper function to copy the content of another 'my_string' into this
 // 'my_string'.

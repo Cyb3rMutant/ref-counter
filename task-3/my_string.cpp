@@ -65,7 +65,9 @@ void my_string::print() const {
 // Helper function to allocate memory for an empty string and sets ref count
 // to 1.
 void my_string::new_empty() {
-    data = new char[1];       // Allocate memory for an empty string.
+    len = new size_t(0);
+    data = new char[*len]; // Allocate memory for an empty string.
+    strcpy(data, "");
     ref_counter = new int(1); // Initialize the reference count to 1.
 }
 

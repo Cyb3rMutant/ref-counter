@@ -9,7 +9,7 @@
       + [Member Functions](#member-functions)
    * [Memory Management](#memory-management)
    * [Memory Management Illustration](#memory-management-illustration)
-   * [Error Hndling](#error-hndling)
+   * [Error Handling](#error-handling)
 - [Task 2](#task-2)
    * [Introduction](#introduction-1)
    * [Class Overview](#class-overview-1)
@@ -18,7 +18,7 @@
       + [Member Functions](#member-functions-1)
    * [Memory Management](#memory-management-1)
    * [Memory Management Illustration](#memory-management-illustration-1)
-   * [Error Hndling](#error-hndling-1)
+   * [Error Handling](#error-handling-1)
 - [Task 3](#task-3)
    * [Introduction](#introduction-2)
    * [Memory Leak](#memory-leak)
@@ -31,11 +31,18 @@
 
 # How to run
 
-use the following command to run any of the tasks:
+first you need to clone the repository locally with the following command:
+
+```bash
+$ git clone https://gitlab.uwe.ac.uk/y2-abuhummos/worksheet-1.git
+$ cd worksheet-1
+```
+
+next, use the following command to run any of the tasks:
 
 ```bash
 $ cd task-<task number>
-$ clang++ -o main my_string.cpp main.cpp
+$ clang++ -std=c++17 -o main main.cpp my_string.cpp
 $ ./main
 ```
 
@@ -153,12 +160,12 @@ int main() {
 
 When object `s` is created it will be allocated on the stack for `main` and the string data and length will be allocated memory on the heap. Next, upon the creation of object `t`, the copy constructor copies the address of the first character in the string and length allocated on the heap when `s` was created, so now they both share the same memory for string and length. Once `t` goes out of scope and gets freed by the RAII system, the pointers data and len are deleted but the data they are pointing to stay since it was not freed in the destructor. Same thing when `s` is deleted at the end of `main`, thus **resulting in a data leak**, which will be addressed in task 2.
 
-## Error Hndling
+## Error Handling
 
 The `my_string` class includes error checking for out-of-bounds access. If you attempt to access an index outside the valid boundaries of the string, it will throw a `std::out_of_range` exception. Example:
 ```cpp
 my_string str("Hello World")
-char c = str.get_char(4);
+char c = str.get_char(20);
 ```
 output:
 ```output
@@ -247,7 +254,7 @@ The creation and allocation of memory for `s`, `t` and `r` on the heap stays the
 
 visualization tool is https://pythontutor.com/. note that the code written in there is a simplified version for the tool to be able to parse it, but it still functions exactly the same.
 
-## Error Hndling
+## Error Handling
 
 Nothing new from task 1
 
